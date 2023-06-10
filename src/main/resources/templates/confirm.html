@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+	<body>
+		<div align="center">
+			<h1>Confirm Student</h1>
+			<form th:object="${student}" th:action="@{/save}" method="post">
+				<table border="0" cellpadding="10">
+					<tr>
+						<td>ID:</td>
+						<td><input type="text" readonly th:field="*{id}"/></td>
+					</tr>
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" readonly th:field="*{name}"/></td>
+					</tr>
+					<tr>
+						<td>DOB:</td>
+						<td><input type="text" readonly th:field="*{dob}"/></td>
+					</tr>
+					<tr>
+						<td>Department:</td>
+						<td>
+							<input type="text" readonly th:field="*{department}"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align: center;">
+							<input type="submit" value="Confirm" name="confirm" />
+							<input type="submit" value="Back" name="back" />
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
